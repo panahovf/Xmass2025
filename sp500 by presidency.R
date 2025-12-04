@@ -223,19 +223,23 @@ ggplot(df_plot,
       margin = margin(b = 8)
     ),
     axis.title.x = element_text(
+      size   = 8,
       margin = margin(t = 8)
     ),
     axis.title.y = element_text(
+      size   = 8,
       margin = margin(r = 8)
     ),
     panel.grid.major.y = element_line(color = "grey90", linewidth = 0.2),
     axis.line.x        = element_line(color = "grey90", linewidth = 0.2),
-    legend.position    = c(0.1, 0.8)
+    legend.position    = c(0.1, 0.8),
+    legend.title = element_text(size = 8),  # title font size
+  legend.text  = element_text(size = 6)    # item font size
   )
 
 
 # save
-ggsave("spx_presidents.png", width = 8, height = 4, dpi = 2400, units = "in")
+ggsave("spx_presidents.png", width = 7, height = 3.5, dpi = 1000, units = "in")
 
 
 
